@@ -1,0 +1,12 @@
+---
+#
+# Playbook to install the ELK stack + Beats
+#
+- hosts: elkservers
+  remote_user: admin
+  become: yes
+  become_user: root
+  roles:
+  - { role: java }
+  - { role: elasticsearch8 }
+
